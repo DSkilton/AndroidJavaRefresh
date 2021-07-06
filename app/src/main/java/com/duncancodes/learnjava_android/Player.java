@@ -55,4 +55,10 @@ public class Player {
     public void setScore(int score) {
         this.score = score;
     }
+
+    public void setNameAndLevel(String name, int level){
+        this.handleName = name;
+        this.level = level;
+    }
+
 }
