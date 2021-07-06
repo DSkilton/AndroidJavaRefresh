@@ -27,6 +27,7 @@ public class Player {
 
     public void setHandleName(String handle){
         if(handle.length() < 3){
+            System.out.println("The name " + handle + " is too short, must be 3 characters or more.");
             return;
         }
         handleName = handle;
@@ -57,8 +58,10 @@ public class Player {
     }
 
     public void setNameAndLevel(String name, int level){
-        this.handleName = name;
-        this.level = level;
+//        this.handleName = name;
+//        this.level = level;
+        setHandleName(name);
+        setLevel(level);
     }
 
 }

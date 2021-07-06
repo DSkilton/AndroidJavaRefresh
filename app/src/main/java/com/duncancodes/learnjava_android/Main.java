@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Player tim = new Player();
         System.out.println(tim.getHandleName());
-        tim.setHandleName("Tim");
+        tim.setHandleName("Timothy");
         System.out.println(tim.getHandleName());
         System.out.println("Level: " + tim.getHandleName());
         System.out.println("Lives: " + tim.getLives());
