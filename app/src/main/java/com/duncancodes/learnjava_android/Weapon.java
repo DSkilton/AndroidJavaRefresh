@@ -5,6 +5,12 @@ public class Weapon {
     private int damageInflicted;
     private int hitPoints;
 
+    public Weapon(String name, int damageInflicted, int hitPoints) {
+        this.name = name;
+        this.damageInflicted = damageInflicted;
+        this.hitPoints = hitPoints;
+    }
+
     public String getName() {
         return name;
     }

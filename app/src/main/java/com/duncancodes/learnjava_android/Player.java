@@ -5,6 +5,7 @@ public class Player {
     private int lives;
     private int level;
     private int score;
+    private Weapon weapon;
 
     public Player(){//calls constructor from line 13
         this("Unknown player");
@@ -19,6 +20,7 @@ public class Player {
         lives = 3;
         level = startingLevel;
         score = 0;
+        setDefaultWeapon();
     }
 
     public String getHandleName(){
@@ -31,6 +33,11 @@ public class Player {
             return;
         }
         handleName = handle;
+    }
+
+    private void setDefaultWeapon(){
+        this.weapon = new Weapon("Sword", 10, 20);
+
     }
 
     public int getLives() {
@@ -62,6 +69,14 @@ public class Player {
 //        this.level = level;
         setHandleName(name);
         setLevel(level);
+    }
+
+    public Weapon getWeapon(){
+        return weapon;
+    }
+
+    public void setWeapon(Weapon weapon){
+        this.weapon = weapon;
     }
 
 }
