@@ -10,6 +10,10 @@ public class Main {
         System.out.println("Lives: " + tim.getLives());
         System.out.println(tim.getWeapon().getName());
 
+        Weapon myAxe = new Weapon("Goldshine Axe", 15, 50);
+        tim.setWeapon(myAxe);
+        System.out.println(tim.getWeapon().getName());
+
 //        Player louise = new Player("Louise");
 //        System.out.println(louise.getHandleName());
 //        louise.setLives(5);

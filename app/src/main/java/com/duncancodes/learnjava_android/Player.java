@@ -7,6 +7,7 @@ public class Player {
     private int score;
     private Weapon weapon;
 
+
     public Player(){//calls constructor from line 13
         this("Unknown player");
     }
