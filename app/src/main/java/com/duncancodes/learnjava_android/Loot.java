@@ -1,13 +1,13 @@
 package com.duncancodes.learnjava_android;
 
-enum lootType{POTION, RING, ARMOR} //no semi colon
+enum LootType{POTION, RING, ARMOR} //no semi colon
 
 public class Loot {
     private String name;
-    private lootType type;
+    private LootType type;
     private int value;
 
-    public Loot(String name, lootType type, int value) {
+    public Loot(String name, LootType type, int value) {
         this.name = name;
         this.type = type;
         this.value = value;
@@ -21,11 +21,11 @@ public class Loot {
         this.name = name;
     }
 
-    public lootType getType() {
+    public LootType getType() {
         return type;
     }
 
-    public void setType(lootType type) {
+    public void setType(LootType type) {
         this.type = type;
     }
 

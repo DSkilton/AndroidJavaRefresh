@@ -1,12 +1,14 @@
 package com.duncancodes.learnjava_android;
 
+import java.util.ArrayList;
+
 public class Player {
     private String handleName;
     private int lives;
     private int level;
     private int score;
     private Weapon weapon;
-
+    private ArrayList<Loot> inventory; //only allowed to store objects of class/ type Loot
 
     public Player(){//calls constructor from line 13
         this("Unknown player");
@@ -17,11 +19,16 @@ public class Player {
     }
 
     public Player(String handle, int startingLevel){
-        handleName = handle;
-        lives = 3;
-        level = startingLevel;
-        score = 0;
+//        handleName = handle;
+//        lives = 3;
+//        level = startingLevel;
+//        score = 0;
         setDefaultWeapon();
+        setHandleName(handle);
+        setLives(3);
+        setLevel(startingLevel);
+        setScore(0);
+        inventory = new ArrayList<>();
     }
 
     public String getHandleName(){
@@ -80,4 +87,29 @@ public class Player {
         this.weapon = weapon;
     }
 
-}
+//    public void setInventory(ArrayList<Loot> inventory) {
+//        this.inventory = inventory;
+//    }
+
+    public void pickUpLoot(Loot newLoot){
+        inventory.add(newLoot);
+    }
+
+    public boolean dropLoot(Loot loot){
+        if(this.inventory.contains(loot)){
+            inventory.remove(loot);
+               return true;
+        }
+
+        return false;
+    }
+
+    public void showInventory(){
+        for(Loot item : inventory){
+            System.out.println(item.getName());
+        }
+        System.out.println("========");
+
+    }
+
+}// end of class
