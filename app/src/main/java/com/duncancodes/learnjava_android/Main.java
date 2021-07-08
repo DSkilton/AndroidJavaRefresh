@@ -24,6 +24,8 @@ public class Main {
         Loot redPotion = new Loot("Red Potion", LootType.POTION, 7);
         tim.pickUpLoot(redPotion);
         tim.pickUpLoot(new Loot("+3 Chest Armor", LootType.ARMOR, 80));
+        tim.pickUpLoot(new Loot("+2 Ring of Protection", LootType.RING, 40));
+        tim.pickUpLoot(new Loot("Invisibility Potion", LootType.POTION, 35));
         tim.showInventory();
 
     }
