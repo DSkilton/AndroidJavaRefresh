@@ -13,7 +13,7 @@ public class Main {
                 System.out.println("Dracula ran away");
                 break;
             } else {
-                dracula.takeDamage(12);
+                dracula.takeDamage(80);
                 dracula.showInfo();
             }
         }
