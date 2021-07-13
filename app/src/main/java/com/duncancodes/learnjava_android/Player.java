@@ -109,7 +109,16 @@ public class Player {
             System.out.println(item.getName());
         }
         System.out.println("========");
+    }
 
+    public int score(){
+        int total = 0;
+        for(int i = 0; i < inventory.size(); i++){
+            Loot currentLoot = inventory.get(i);
+            System.out.println(currentLoot.getName() + " is worth " + currentLoot);
+            total = total + currentLoot.getValue();
+        }
+        return total;
     }
 
 }// end of class
