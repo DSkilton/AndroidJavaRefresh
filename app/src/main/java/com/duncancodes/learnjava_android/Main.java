@@ -28,6 +28,11 @@ public class Main {
         tim.pickUpLoot(new Loot("Invisibility Potion", LootType.POTION, 35));
         tim.showInventory();
 
+        Enemy enemy = new Enemy("test enemy", 10, 3);
+        enemy.showInfo();
+        enemy.takeDamage(3);
+        enemy.takeDamage(11);
+        enemy.showInfo();
     }
 
 }
